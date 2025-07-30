@@ -9,7 +9,7 @@ const User = ({ showEditModal, selectedCard }: any): JSX.Element => {
   return (
     <div>
       <Container.Form
-        url="/students/update-student"
+        url="/students/update/me"
         name="students"
         method="put"
         fields={[
@@ -34,15 +34,6 @@ const User = ({ showEditModal, selectedCard }: any): JSX.Element => {
             required: true,
             name: "username",
             value: get(selectedCard, "username"),
-          },
-          {
-            name: "phoneNumber",
-            value: get(selectedCard, "phoneNumber"),
-          },
-          {
-            type: "any",
-            name: "photoUrl",
-            value: get(selectedCard, "photoUrl"),
           },
           {
             type: "string",
@@ -99,32 +90,11 @@ const User = ({ showEditModal, selectedCard }: any): JSX.Element => {
                   />
                   <Field
                     type="text"
-                    name="phoneNumber"
-                    label={t("Phone Number")}
-                    component={Fields.Input}
-                    placeholder={t("Phone Number")}
-                    rootClassName="mr-[10px]"
-                  />
-                  <Field
-                    type="text"
                     name="email"
                     label={t("Email")}
                     component={Fields.Input}
                     placeholder={t("Email")}
                   />
-                  <div className="col-span-2">
-                    <p className="text-[#9EA3B5] px-[12px] py-[6px] bg-[#E6ECFE] dark:bg-[#454d70] rounded-[6px] inline-block mb-[12px] mr-[10px]">
-                      {t("photo")}
-                    </p>
-                    <Field
-                      name="photoUrl"
-                      label={t("Photo")}
-                      placeholder={t("Photo")}
-                      rootClassName="mb-[8px]"
-                      component={Fields.FileUpload3}
-                      accept="image/png, image/jpeg, image/jpg"
-                    />
-                  </div>
                   <div className="col-span-2">
                     <Button
                       size="large"

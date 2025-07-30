@@ -33,13 +33,8 @@ const HeaderComponent = () => {
           {t(get(menus, "title", ""))}
         </span>
       </div>
-      <div className="text">
-        <p>
-          {get(info, "balance")} {t("Point")}
-        </p>
-      </div>
       <div className="flex items-center">
-        <Select
+        {/* <Select
           defaultValue={system?.lang}
           size={"large"}
           onChange={(value: any) => {
@@ -49,7 +44,7 @@ const HeaderComponent = () => {
           {config.API_LANGUAGES.map((lang) => (
             <Option value={lang?.code}>{get(lang, "short", "")}</Option>
           ))}
-        </Select>
+        </Select> */}
         <div className="profile-dropdown">
           <div className="profile-dropdown__circle">
             <img

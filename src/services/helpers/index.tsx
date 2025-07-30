@@ -10,58 +10,10 @@ interface MenuItem {
 
 const menuItems: MenuItem[] = [
   {
-    key: "problems",
-    label: "Masalalar",
+    key: "dashboard",
+    label: "Dashboard",
     icon: <AppstoreOutlined />,
-    route: "/problems",
-  },
-  {
-    key: "tests",
-    label: "Testlar",
-    icon: <AppstoreOutlined />,
-    route: "/tests",
-  },
-  {
-    key: "training",
-    label: "Treninglar",
-    icon: <AppstoreOutlined />,
-    route: "/training",
-  },
-  {
-    key: "html",
-    label: "HTML&CSS",
-    icon: <AppstoreOutlined />,
-    route: "/html",
-  },
-  // {
-  //   key: "group",
-  //   label: "Guruhlar",
-  //   icon: <AppstoreOutlined />,
-  //   route: "/groups",
-  // },
-  {
-    key: "shop",
-    label: "Do'kon",
-    icon: <AppstoreOutlined />,
-    route: "/shop",
-  },
-  {
-    key: "resources",
-    label: "Resurslar",
-    icon: <AppstoreOutlined />,
-    route: "/resources",
-  },
-  {
-    key: "histories",
-    label: "Tarix",
-    icon: <AppstoreOutlined />,
-    route: "/histories",
-  },
-  {
-    key: "feedback",
-    label: "Fikrlar",
-    icon: <AppstoreOutlined />,
-    route: "/feedback",
+    route: "/",
   },
 ];
 
