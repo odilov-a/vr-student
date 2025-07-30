@@ -4,6 +4,8 @@ const User = lazy(() => import("pages/admin"));
 const Default = lazy(() => import("pages/default"));
 const NotFound = lazy(() => import("pages/notFound"));
 
+const Book = lazy(() => import("pages/book"));
+
 export interface IRoute {
   path: string;
   key?: string | "*";
@@ -19,6 +21,12 @@ const privateRoutes: IRoute[] = [
     key: "welcome",
     title: "",
     element: <Default />,
+  },
+  {
+    path: "/books",
+    key: "books",
+    title: "Kitoblar",
+    element: <Book />,
   },
   {
     path: "/profile",

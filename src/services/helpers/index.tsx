@@ -15,6 +15,12 @@ const menuItems: MenuItem[] = [
     icon: <AppstoreOutlined />,
     route: "/",
   },
+  {
+    key: "books",
+    label: "Kitoblar",
+    icon: <AppstoreOutlined />,
+    route: "/books",
+  },
 ];
 
 function gen4() {
