@@ -23,7 +23,7 @@ const menuItems: MenuItem[] = [
   },
   {
     key: "organs",
-    label: "Organlar",
+    label: "VR",
     icon: <AppstoreOutlined />,
     route: "/organs",
   },

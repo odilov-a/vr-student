@@ -24,7 +24,7 @@ const Organ = () => {
         footer={null}
         centered
         title={t("More information")}
-        width={600}
+        width={700}
         destroyOnClose
       >
         <More {...{ showMoreModal, moreModal }} />
@@ -44,6 +44,7 @@ const Organ = () => {
                       onClick: () =>
                         showMoreModal({ open: true, data: record }),
                     })}
+                    className="cursor-pointer"
                     columns={[
                       {
                         key: "name",

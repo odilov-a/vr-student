@@ -33,7 +33,7 @@ const privateRoutes: IRoute[] = [
   {
     path: "/organs",
     key: "organs",
-    title: "Organlar",
+    title: "VR",
     element: <Organ />,
   },
   {
