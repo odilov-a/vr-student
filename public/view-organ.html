@@ -24,40 +24,25 @@
         border: none;
         margin-top: 20px;
       }
-      #tokenForm {
-        margin-bottom: 20px;
-      }
     </style>
   </head>
   <body>
     <div class="container">
-      <div id="tokenForm">
-        <label for="token">Token kiriting:</label>
-        <input type="text" id="token" placeholder="Token..." />
-        <button onclick="saveToken()">Saqlash</button>
-      </div>
       <div id="model"></div>
     </div>
 
     <script>
-      function saveToken() {
-        const token = document.getElementById("token").value;
-        if (token) {
-          localStorage.setItem("token", token);
-          loadOrgan();
-        }
-      }
-
       async function loadOrgan() {
-        const token = localStorage.getItem("token");
+        const urlParams = new URLSearchParams(window.location.search);
+        const token = urlParams.get("token");
+        const id = urlParams.get("id");
 
         if (!token) {
           document.getElementById("model").innerHTML =
-            "<p style='color:red;'>Token yo‘q. Iltimos, tokenni kiriting.</p>";
+            "<p style='color:red;'>Token topilmadi.</p>";
           return;
         }
 
-        const id = new URLSearchParams(window.location.search).get("id");
         if (!id) {
           document.getElementById("model").innerHTML =
             "<p style='color:red;'>ID topilmadi.</p>";
@@ -87,13 +72,7 @@
         }
       }
 
-      window.onload = function() {
-        const token = localStorage.getItem("token");
-        if (token) {
-          document.getElementById("token").value = token;
-          loadOrgan();
-        }
-      };
+      window.onload = loadOrgan;
     </script>
   </body>
 </html>

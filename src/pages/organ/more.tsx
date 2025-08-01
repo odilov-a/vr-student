@@ -10,29 +10,13 @@ const More = ({ showMoreModal, moreModal }: any) => {
   }
 
   const id = get(data, "_id");
-  const url = `https://vr.student.uzcontest.uz/view-organ.html?id=${id}`;
-
   let token = localStorage.getItem("token");
+  const url = `https://vr.student.uzcontest.uz/view-organ.html?id=${id}?token=${token}`;
 
   return (
     <div className="flex-1 p-4">
       <div className="space-y-4">
         <div className="flex flex-col items-center space-y-2">
-          <h3 className="text-lg font-semibold dark:text-white">
-            {t("Token for organ detail")}
-          </h3>
-          <div className="flex items-center space-x-2">
-            <p className="text-sm text-gray-500 dark:text-gray-400 text-center flex-1 break-all">
-              {token}
-            </p>
-          </div>
-          <button
-            onClick={() => navigator.clipboard.writeText(token || "")}
-            className="px-2 py-1 text-xs bg-blue-500 hover:bg-blue-600 text-white rounded transition-colors duration-200 flex-shrink-0"
-            title="Copy token"
-          >
-            Copy
-          </button>
           <div className="p-4 bg-white rounded-lg shadow-md">
             <QRCodeSVG
               value={url}

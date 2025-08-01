@@ -24,7 +24,7 @@ const Organ = () => {
         footer={null}
         centered
         title={t("More information")}
-        width={700}
+        width={500}
         destroyOnClose
       >
         <More {...{ showMoreModal, moreModal }} />
