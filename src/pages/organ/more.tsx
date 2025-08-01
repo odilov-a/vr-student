@@ -10,7 +10,7 @@ const More = ({ showMoreModal, moreModal }: any) => {
   }
 
   const id = get(data, "_id");
-  const url = `http://192.168.0.103:3001/view-organ.html?id=${id}`;
+  const url = `https://vr.student.uzcontest.uz/view-organ.html?id=${id}`;
 
   let token = localStorage.getItem("token");
 
