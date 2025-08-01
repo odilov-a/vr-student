@@ -40,10 +40,6 @@ const Organ = () => {
                     dataSource={typedItems}
                     rowKey="_id"
                     pagination={{ pageSize: 12 }}
-                    onRow={(record) => ({
-                      onClick: () =>
-                        showMoreModal({ open: true, data: record }),
-                    })}
                     className="cursor-pointer"
                     columns={[
                       {
@@ -65,6 +61,25 @@ const Organ = () => {
                             className="dark:text-[#e5e7eb] line-clamp-2"
                             dangerouslySetInnerHTML={{ __html: value }}
                           />
+                        ),
+                      },
+                      {
+                        key: "qr",
+                        align: "center",
+                        title: t("QR Code"),
+                        dataIndex: "qr",
+                        className: "w-[120px]",
+                        render: (_: any, record: OrganItem) => (
+                          <Button
+                            type="primary"
+                            size="small"
+                            onClick={() =>
+                              showMoreModal({ open: true, data: record })
+                            }
+                            className="w-[50%] bg-[#1677ff] hover:bg-[#096dd9] h-[30px]"
+                          >
+                            {t("QR Code")}
+                          </Button>
                         ),
                       },
                       {
