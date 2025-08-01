@@ -11,7 +11,7 @@ const More = ({ showMoreModal, moreModal }: any) => {
 
   const id = get(data, "_id");
   let token = localStorage.getItem("token");
-  const url = `https://vr.student.uzcontest.uz/view-organ.html?id=${id}?token=${token}`;
+  const url = `https://vr.student.uzcontest.uz/view-organ.html?id=${id}&token=${token}`;
 
   return (
     <div className="flex-1 p-4">
